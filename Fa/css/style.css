@@ -40,7 +40,12 @@ body {
     height: 100%;
     font-family: 'Yekan';
     line-height: 1.8;
-    color: #999
+    color: #999;
+    letter-spacing: 0 !important;
+}
+
+a, li {
+  direction: rtl;
 }
 
 .no-padding {
@@ -91,14 +96,17 @@ h1 {
     color: #393939;
     font-size: 60px;
     text-transform: uppercase;
+    direction: rtl !important;
 }
 
 h3 {
+    direction: rtl !important;
     color: #393939;
 }
 
 h5 {
     color: #ffbf00;
+    direction: rtl !important;
 }
 
 
@@ -242,6 +250,7 @@ h5 {
 }
 
 .box-primary-nav-trigger .box-menu-text {
+    float: left;
     color: #393939;
     text-transform: uppercase;
     font-weight: 700;
@@ -327,8 +336,7 @@ h5 {
 }
 
 .box-primary-nav-trigger .box-menu-icon {
-    left: auto;
-    right: 1em;
+    float: left;
     -webkit-transform: translateX(0) translateY(-50%);
     transform: translateX(0) translateY(-50%);
 }
@@ -446,7 +454,7 @@ b i:last-child {
 }
 
 .box-intro h5 {
-    letter-spacing: 4px;
+    letter-spacing: 0 !important;
     text-transform: uppercase;
     color: #999;
     line-height: 1.7
