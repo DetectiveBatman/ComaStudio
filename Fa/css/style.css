@@ -1188,3 +1188,20 @@ textarea:focus {
         line-height: 30px;
     }
 }
+
+
+
+
+/**
+
+New Codes
+
+**/
+
+#top-footage {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+}
