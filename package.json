@@ -1,0 +1,22 @@
+{
+  "name": "coma-studio",
+  "version": "0.0.1",
+  "description": "Back-end and Front-end codes of coma studio's site",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DetectiveBatman/ComaStudio.git"
+  },
+  "author": "Nima Ra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DetectiveBatman/ComaStudio/issues"
+  },
+  "homepage": "https://github.com/DetectiveBatman/ComaStudio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
