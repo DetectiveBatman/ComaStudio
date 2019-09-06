@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700);
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @font-face {
   font-family: yekan;
   src: url('./Fa/fonts/Yekan.ttf');
 }
 
 * {
-    font-family: Poppins;
+  font-family: 'Lobster', cursive;
 }
 
 html, body {
@@ -38,15 +39,20 @@ html, body {
 
 #header {
   display: block;
+  border-bottom: 1px solid #000;
+  font-size: 28px;
 }
 
 #options {
   width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .lang {
   text-decoration: none;
   color: #000;
+  font-size: 22px;
 }
 
 #fa {
