@@ -7,3 +7,4 @@ nvm install 12.0.0
 nvm use 12.0.0
 nvm install-latest-npm
 npm install
+npm start
