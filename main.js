@@ -9,6 +9,13 @@ app.get('/', (req, res, next) => {
   res.sendFile(__dirname + 'index.html');
 });
 
-app.listen(port);
+app.get('/Fa', (req, res, next) => {
+  res.sendFile(__dirname + 'Fa/index.html');
+});
 
-console.log('[*] Listening on the port: ' + port);
+app.get('/En', (req, res, next) => {
+  res.sendFile(__dirname + 'En/index.html');
+});
+
+app.listen(port);
+console.log('[*] Listening on port: ' + port);
