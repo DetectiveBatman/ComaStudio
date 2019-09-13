@@ -20,4 +20,4 @@ app.get('/En', (req, res, next) => {
 });
 
 app.listen(port);
-console.log(chalk.green('[*] Listening on port: ') + chalk.red(port));
+console.log(chalk.green.bold('[*] ') + chalk.green.bold('Listening on port:') + ' ' + chalk.red.bold(port));
