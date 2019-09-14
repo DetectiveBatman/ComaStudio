@@ -580,10 +580,6 @@ b i:last-child {
     backface-visibility: hidden;
 }
 
-.box-headline.rotate-2 b {
-    opacity: 0;
-}
-
 .box-headline.rotate-2 i {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -1203,6 +1199,11 @@ textarea:focus {
   object-fit: cover;
   opacity: 0.7;
   /* position: fixed; */
+}
+
+.box-headline.rotate-2 b {
+  position: relative !important;
+  display: none;
 }
 
 /* About Us Codes */
