@@ -1,11 +1,13 @@
 var count = 2;
-var i = 1;
+var i = 0;
 function changeHeader(i){
-	$("#top-headline-" + i).fadeOut('fast');
-	$("#top-headline-" + i).fadeIn('fast');
+	$("#top-headline-" + i).fadeOut('fast', () => {
+		i = (i + 1) % count;
+		$("#top-headline-" + i).fadeIn('fast');
+	});
+	return i;
 }
 
 setInterval(() => {
-	changeHeader(i);
-	i = (i + 1) % count;
-}, 5000);
+	i = changeHeader(i);
+}, 3000);
