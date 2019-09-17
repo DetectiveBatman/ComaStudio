@@ -1231,3 +1231,21 @@ textarea:focus {
 .service-box p {
   direction: rtl;
 }
+
+/* contact.html */
+
+.contact-p {
+  text-align: right;
+  direction: rtl;
+}
+
+.input-contact span {
+  direction: rtl;
+  text-align: right;
+  float: right;
+}
+
+#contact-submit {
+  float: right;
+  letter-spacing: 0;
+}
