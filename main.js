@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+const {db}    = require('./config.js');
+const args    = process.argv.splice(2);
 const express = require('express');
-const chalk = require('chalk');
-const app = express();
-const args = process.argv.splice(2);
-const port = args[0] || 8545;
+const chalk   = require('chalk');
+const port    = args[0] || 8545;
+const app     = express();
 
 
 app.use(express.static(__dirname));
