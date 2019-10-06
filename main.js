@@ -1,11 +1,15 @@
 #!/usr/bin/env node
-const {db}    = require('./config.js');
-const api     = require('./api/main.js');
-const args    = process.argv.splice(2);
-const express = require('express');
-const chalk   = require('chalk');
-const port    = args[0] || 8545;
-const app     = express();
+const api        = require('./api/main.js');
+const {db}       = require('./config.js');
+const bodyParser = require('body-parser');
+const args       = process.argv.splice(2);
+const express    = require('express');
+const chalk      = require('chalk');
+const port       = args[0] || 8545;
+const app        = express();
+
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.use(express.static(__dirname));
