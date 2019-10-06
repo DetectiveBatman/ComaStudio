@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const {db}    = require('./config.js');
+const api     = require('./api/main.js');
 const args    = process.argv.splice(2);
 const express = require('express');
 const chalk   = require('chalk');
@@ -20,6 +21,8 @@ app.get('/Fa', (req, res, next) => {
 app.get('/En', (req, res, next) => {
   res.sendFile(__dirname + 'En/index.html');
 });
+
+api(app, db);
 
 app.listen(port);
 console.log(chalk.green.bold('[*] ') + chalk.green.bold('Listening on port:') + ' ' + chalk.red.bold(port));
