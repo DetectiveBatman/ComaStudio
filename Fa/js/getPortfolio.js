@@ -35,12 +35,12 @@ $(document).ready(() => {
         let category = item.category;
         let subcat = item.subcat;
         let title = item.title;
-
+        let id = item.id;
         let elements = `
         <!-- single work -->
 
         <div class="col-md-4 col-sm-6 ${subcat} ${category}">
-            <a href="single-project.html" class="portfolio_item">
+            <a href="single-project.html?id=${id}" class="portfolio_item">
                 <img src="${img}" alt="image" class="img-responsive" />
                 <div class="portfolio_item_hover">
                     <div class="portfolio-border clearfix">
