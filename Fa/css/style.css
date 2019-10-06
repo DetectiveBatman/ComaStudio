@@ -1184,9 +1184,19 @@ textarea:focus {
 /* General */
 
 .top-bar {
-  background: -webkit-linear-gradient( rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(../../lib/assets/01.jpg);
-  background: linear-gradient( rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(../../lib/assets/01.jpg);
+  background: -webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/01.jpg);
+  background: linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/01.jpg);
+  color: #313131;
 }
+
+.top-bar h1 {
+  color: #313131;
+}
+
+.top-bar p, .top-bar p a {
+  color: #313131;
+}
+
 
 /* Index.html */
 #top-footage {

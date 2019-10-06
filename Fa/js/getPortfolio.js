@@ -22,6 +22,8 @@ var subcategories = {
   festival: 'نمایشگاه',
 }
 
+function getCat(cat){return categories.cat};
+
 $(document).ready(() => {
   $.post('/api/getPortfolio', (response) => {
     if (response.ok == 'true') {
@@ -44,7 +46,7 @@ $(document).ready(() => {
                     <div class="portfolio-border clearfix">
                         <div class="item_info">
                             <span>${title}</span>
-                            <em>${subcategories.subcat} / ${categories.category}</em>
+                            <em>${subcategories.subcat} / ${getCat(category)}</em>
                         </div>
                     </div>
                 </div>
