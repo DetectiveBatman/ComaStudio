@@ -1259,3 +1259,25 @@ textarea:focus {
   float: right;
   letter-spacing: 0;
 }
+
+/* Portfolio */
+.item_info span {
+  font-size: 28px !important;
+}
+
+.item_info em {
+  font-size: 14px !important;
+}
+
+/* Single Project */
+#project-description {
+  float: right;
+  direction: rtl;
+  font-size: 18px;
+}
+
+.cat-ul {
+  float: right;
+  width: 100%;
+  direction: rtl;
+}

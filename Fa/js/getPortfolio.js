@@ -7,19 +7,12 @@ var categories = {
   ads: 'تبلیغات',
   branding: 'برندسازی',
   visualIdentity: 'هویت بصری',
-  festival: 'نمایشگاه',
+  festival: 'نمایشگاه'
 }
 
 var subcategories = {
-  photography: 'آتلیه عکاسی',
-  music: 'ضبط و میکس',
-  film: 'فیلم و فیلم کوتاه',
-  modeling: 'طراحی و مدل سازی',
-  media: 'مدیا',
-  ads: 'تبلیغات',
-  branding: 'برندسازی',
-  visualIdentity: 'هویت بصری',
-  festival: 'نمایشگاه',
+  space: 'فضاسازی',
+  logo: 'لوگو'
 }
 
 function getCat(cat){return categories.cat};
@@ -46,7 +39,7 @@ $(document).ready(() => {
                     <div class="portfolio-border clearfix">
                         <div class="item_info">
                             <span>${title}</span>
-                            <em>${subcategories.subcat} / ${getCat(category)}</em>
+                            <em style='letter-spacing: 0;'>${categories[category]} / ${subcategories[subcat]}</em>
                         </div>
                     </div>
                 </div>
