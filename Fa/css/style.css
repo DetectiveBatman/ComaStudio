@@ -1197,6 +1197,28 @@ textarea:focus {
   color: #313131;
 }
 
+.yellow-line {
+  height: 1px;
+  width: 100%;
+  float: right;
+  display: flex;
+}
+
+.yellow-line i {
+  background-color: #ffbf00;
+  height: 100%;
+  width: 100px;
+  float: right;
+  margin: 0 auto;
+}
+
+.box-logo {
+  padding-top: 6px;
+}
+
+.box-primary-nav {
+  padding: 100px 0 0;
+}
 
 /* Index.html */
 #top-footage {
@@ -1219,6 +1241,16 @@ textarea:focus {
   position: relative;
   font-size: 24px;
   color: #393939;
+}
+
+.portfolio_item .portfolio_item_hover .item_info span {
+  border-bottom: 2px solid #ffbf00;
+}
+
+.portfolio_item .portfolio_item_hover .item_info em {
+  background: none;
+  color: #FFF;
+  letter-spacing: 0;
 }
 
 /* About Us Codes */
