@@ -1220,6 +1220,16 @@ textarea:focus {
   padding: 100px 0 0;
 }
 
+.portfolio_item .portfolio_item_hover .item_info span {
+  border-bottom: 2px solid #ffbf00;
+}
+
+.portfolio_item .portfolio_item_hover .item_info em {
+  background: none;
+  color: #FFF;
+  letter-spacing: 0;
+}
+
 /* Index.html */
 #top-footage {
   right: 0;
@@ -1243,15 +1253,6 @@ textarea:focus {
   color: #393939;
 }
 
-.portfolio_item .portfolio_item_hover .item_info span {
-  border-bottom: 2px solid #ffbf00;
-}
-
-.portfolio_item .portfolio_item_hover .item_info em {
-  background: none;
-  color: #FFF;
-  letter-spacing: 0;
-}
 
 /* About Us Codes */
 
