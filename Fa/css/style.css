@@ -353,8 +353,8 @@ h5 {
     transition-property: -webkit-transform;
     transition-property: transform;
     transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
     list-style: none;
 }
 
@@ -714,7 +714,7 @@ b i:last-child {
     background-color: #ffbf00;
     padding: 0px 20px;
     color: white;
-    border-radius: 25px;
+    border-radius: 3px;
     text-decoration: none;
 }
 
