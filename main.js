@@ -26,6 +26,10 @@ app.get('/En', (req, res, next) => {
   res.sendFile(__dirname + 'En/index.html');
 });
 
+app.get('/File', (req, res, next) => {
+  res.sendFile('/home/nima-ra/Downloads/Joker.mp4');
+});
+
 api(app, db);
 
 app.listen(port);

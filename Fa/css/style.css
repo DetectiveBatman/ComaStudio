@@ -1278,7 +1278,7 @@ textarea:focus {
 }
 
 .about-user {
-  width: 200px;
+  width: 230px;
   border-radius: 3px;
   border: #f3f3f3 solid 2px;
   float: right;
@@ -1310,6 +1310,19 @@ textarea:focus {
   margin-top: 20px;
 }
 
+.team-img {
+  width: 100%;
+  float: right;
+}
+
+.user-name {
+  float: right !important;
+}
+
+.team-member {
+  width: 200px !important;
+}
+
 #about-title {
   font-size: 35px;
   font-weight: bold;
@@ -1320,6 +1333,55 @@ textarea:focus {
 
 #about-subtitle {
   font-size: 14px;
+}
+
+.about-user {
+  position: relative;
+  overflow-y: hidden;
+}
+
+@keyframes infoMove {
+  100% {bottom: 0px;}
+}
+
+@keyframes infoMoveBack {
+  100% {bottom: -90px;}
+}
+
+.profile-info {
+  position: absolute;
+  bottom: -90px;
+  background: #0e0e0ea6;
+  height: 90px;
+  animation: infoMoveBack 1s;
+}
+
+.about-user:hover {
+  cursor: pointer;
+}
+
+.about-user:hover .profile-info {
+  animation: infoMove 1s;
+  animation-fill-mode: forwards;
+}
+
+.profile-info h3 {
+  color: #FFF;
+}
+
+.user-profile {
+  color: #ccc;
+  direction: ltr;
+  text-decoration: none;
+}
+
+.user-profile i {
+  margin-right: 5px;
+}
+
+.user-profile:hover {
+  text-decoration: none;
+  color: #FFF;
 }
 
 /* Services.html */
