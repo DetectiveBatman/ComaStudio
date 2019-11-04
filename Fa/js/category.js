@@ -72,4 +72,12 @@ $(document).ready(() => {
       alert('ناموفق بود...')
     }
   });
+
+
+
+
+
+
+  let height = $("#category-descriptions").height() + 120;
+  $("#category-item-div").css('margin-top', height);
 });
