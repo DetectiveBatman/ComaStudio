@@ -21,4 +21,21 @@ module.exports = function launchAPI(app, db) {
         });
       });
     });
+
+    app.post('/api/getSubcats', (req, res, next) => {
+
+      if (req.body.category) {
+        let query = `SELECT * FROM subcategories WHERE enCategory='${req.body.category}'`;
+
+        db.query(query, (err, resp, fld) => {
+          if (err) console.error(err);
+
+          res.json({
+            ok: 'true',
+            res: resp
+          });
+        });
+      }
+
+    });
 }
