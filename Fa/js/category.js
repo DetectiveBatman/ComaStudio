@@ -19,6 +19,21 @@ var subcategories = {
 }
 
 $(document).ready(() => {
+  $.post('/api/getSubcats', {category: name}, (response) => {
+    if (response.ok == 'true') {
+      let subcats = response.res;
+      for (let i = 0; i < subcats.length; i++) {
+        let subcat = subcats[i];
+        let enSubcat = subcat.en;
+        let faSubcat = subcat.subcat;
+        let element = `<li><a href="" data-filter=".${enSubcat}">${faSubcat}</a></li>`;
+        $(".portfolio_filter").append(element);
+      }
+    } else {
+      alert('خطا رخ داده‌ است. لطفا دوباره تلاش کنید');
+    }
+  });
+
   $.post('/api/getPortfolio', {category: name} , (response) => {
     if (response.ok == 'true') {
       var items = response.res;
