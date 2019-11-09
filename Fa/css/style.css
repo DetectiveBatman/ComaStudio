@@ -1455,6 +1455,7 @@ textarea:focus {
   width: 100%;
   height: auto;
   position: relative;
+  margin-bottom: 60px;
 }
 
 .category-text {

@@ -29,12 +29,16 @@ $(document).ready(() => {
         let element = `<li><a href="" data-filter=".${enSubcat}">${faSubcat}</a></li>`;
         $(".portfolio_filter").append(element);
       }
+      let subcat = subcats[0];
+      let locElement = `<a href="/Fa">خانه</a> / ${subcat.category}`;
+      $("#top-bar-location").append(locElement);
+      $("#top-bar-address").text(subcat.category);
     } else {
       alert('خطا رخ داده‌ است. لطفا دوباره تلاش کنید');
     }
   });
 
-  $.post('/api/getPortfolio', {category: name} , (response) => {
+  /* $.post('/api/getPortfolio', {category: name} , (response) => {
     if (response.ok == 'true') {
       var items = response.res;
       console.log(response);
@@ -72,12 +76,6 @@ $(document).ready(() => {
       alert('ناموفق بود...')
     }
   });
-
-
-
-
-
-
   let height = $("#category-descriptions").height() + 120;
-  $("#category-item-div").css('margin-top', height);
+  $("#category-item-div").css('margin-top', height);*/
 });
