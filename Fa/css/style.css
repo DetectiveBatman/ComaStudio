@@ -1470,3 +1470,36 @@ textarea:focus {
   width: 100%;
   height: auto;
 }
+
+
+/** Footer Style **/
+.footer-menu {
+  float: right;
+  width: 100%;
+  display: flex;
+}
+
+.footer-menu ul {
+  float: right;
+  display: flex;
+  width: 60%;
+  direction: rtl;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.footer-menu ul li {
+  float: right;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.footer-menu ul li a {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.footer-menu ul li a:hover {
+  color: #8e8e8e;
+  text-decoration: none;
+}
