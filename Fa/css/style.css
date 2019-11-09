@@ -1431,6 +1431,12 @@ textarea:focus {
   margin-bottom: 50px;
 }
 
+.portfolio .categories-grid .categories ul li a.active {
+  color: #ffbf00;
+  border: 2px solid #ffbf00;
+  background: none;
+}
+
 /* Single Project */
 #project-description {
   float: right;
