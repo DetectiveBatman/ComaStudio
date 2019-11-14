@@ -1,21 +1,13 @@
 var url = document.URL;
 var name = url.split('?name=')[1];
 
-var categories = {
-  photography: 'آتلیه عکاسی',
-  music: 'ضبط و میکس',
-  film: 'فیلم و فیلم کوتاه',
-  modeling: 'طراحی و مدل سازی',
-  media: 'مدیا',
-  ads: 'تبلیغات',
-  branding: 'برندسازی',
-  visualIdentity: 'هویت بصری',
-  festival: 'نمایشگاه'
-}
+var descriptions = {};
 
-var subcategories = {
-  space: 'فضاسازی',
-  logo: 'لوگو'
+showSub('all');
+
+function showSub(sub) {
+  console.log(descriptions[sub]);
+  $(".category-text").text(descriptions[sub]);
 }
 
 $(document).ready(() => {
@@ -24,10 +16,17 @@ $(document).ready(() => {
       let subcats = response.res;
       for (let i = 0; i < subcats.length; i++) {
         let subcat = subcats[i];
+        console.log(subcat);
         let enSubcat = subcat.en;
         let faSubcat = subcat.subcat;
-        let element = `<li><a href="" data-filter=".${enSubcat}">${faSubcat}</a></li>`;
+        let description = subcat.description;
+        let element = `<li><a href="" onClick="showSub('${enSubcat}')">${faSubcat}</a></li>`;
+        console.log(enSubcat);
+        if (enSubcat == "all") {
+          element = `<li><a href="" class="active" data-filter="*" onClick="showSub('${enSubcat}')">همه</a></li>`;
+        }
         $(".portfolio_filter").append(element);
+        descriptions[enSubcat] = description;
       }
       let subcat = subcats[0];
       let locElement = `<a href="/Fa">خانه</a> / ${subcat.category}`;
