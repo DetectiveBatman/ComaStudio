@@ -1,51 +1,48 @@
 var url = document.URL;
 var name = url.split('?name=')[1];
-
-var descriptions = {};
-var photos = {};
-
-
-function showSub(sub) {
-  $(".category-text").text(descriptions[sub]);
-  let photo = photos[sub];
-  console.log(photos);
-  let photoName = photo.split(',');
-  $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}.jpg`);
-  $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}.jpg`);
-  if (sub != "all") {
-    $("#subcat-portfolio").attr('href', `/Fa/subcategory?name=${sub}`);
-  }
-  $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}.jpg`);
-}
-
+var faName = '';
+var category = '';
 $(document).ready(() => {
-  $.post('/api/getSubcats', {category: name}, (response) => {
+
+  $.post('/api/getSubcats', {subcat: name}, (response) => {
     if (response.ok == 'true') {
-      let subcats = response.res;
-      for (let i = 0; i < subcats.length; i++) {
-        let subcat = subcats[i];
-        let enSubcat = subcat.en;
-        let faSubcat = subcat.subcat;
-        let description = subcat.description;
-        let photo = subcat.photos;
+      faName = response.res[0].subcat;
+      category = response.res[0].category;
+    }
+  });
 
-        descriptions[enSubcat] = description;
-        photos[enSubcat] = photo;
+  $.post('/api/getPortfolio', {subcategory: name}, (response) => {
+    if (response.ok == 'true') {
+      var items = response.res;
+      console.log(response);
+      for (let i = 0; i < items.length; i++){
+        var item = items[i];
+        let img = `../lib/assets/${item.img}.jpg`;
+        let subcat = item.subcat;
+        let title = item.title;
+        let id = item.id;
+        let elements = `
+        <!-- single work -->
 
-        let element = `<li><a href="" onClick="showSub('${enSubcat}')">${faSubcat}</a></li>`;
+        <div class="col-md-4 col-sm-6 ${subcat} ${category}">
+            <a href="single-project.html?id=${id}" class="portfolio_item">
+                <img src="${img}" alt="image" class="img-responsive" />
+                <div class="portfolio_item_hover">
+                    <div class="portfolio-border clearfix">
+                        <div class="item_info">
+                            <span>${title}</span>
+                            <em style='letter-spacing: 0;'>${category} / ${faName}</em>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
 
-        if (enSubcat == "all") {
-          element = `<li><a href="" class="active" data-filter="*" onClick="showSub('${enSubcat}')">همه</a></li>`;
-          showSub('all');
-        }
+        <!-- end single work -->
+        `;
 
-        $(".portfolio_filter").append(element);
+        $(".portfolio_container").append(elements);
       }
-      let subcat = subcats[0];
-      let locElement = `<a href="/Fa">خانه</a> / ${subcat.category}`;
-      document.title = `${subcat.category} - کما استودیو`;
-      $("#top-bar-location").append(locElement);
-      $("#top-bar-address").text(subcat.category);
     } else {
       alert('خطا رخ داده‌ است. لطفا دوباره تلاش کنید');
     }
