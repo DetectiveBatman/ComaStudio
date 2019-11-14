@@ -1183,6 +1183,18 @@ textarea:focus {
 
 /* General */
 
+.item_info span {
+  float: right;
+  display: flex !important;
+  width: 100%;
+}
+
+.item_info span div {
+  float: right;
+  border-bottom: 2px solid #ffbf00;
+  margin: 0 auto;
+}
+
 .top-bar {
   background: -webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/01.jpg);
   background: linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/01.jpg);
@@ -1218,10 +1230,6 @@ textarea:focus {
 
 .box-primary-nav {
   padding: 100px 0 0;
-}
-
-.portfolio_item .portfolio_item_hover .item_info span {
-  border-bottom: 2px solid #ffbf00;
 }
 
 .portfolio_item .portfolio_item_hover .item_info em {

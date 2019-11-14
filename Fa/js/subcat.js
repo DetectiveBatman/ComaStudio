@@ -38,7 +38,7 @@ $(document).ready(() => {
                 <div class="portfolio_item_hover">
                     <div class="portfolio-border clearfix">
                         <div class="item_info">
-                            <span>${title}</span>
+                            <span><div>${title}</div></span>
                             <em style='letter-spacing: 0;'>${category} / ${faName}</em>
                         </div>
                     </div>
