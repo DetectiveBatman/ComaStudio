@@ -30,6 +30,10 @@ app.get('/Fa/category', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/category.html');
 });
 
+app.get('/Fa/subcategory', (req, res, next) => {
+  res.sendFile(__dirname + '/Fa/subcat.html');
+});
+
 api(app, db);
 
 app.listen(port);
