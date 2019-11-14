@@ -10,9 +10,12 @@ function showSub(sub) {
   let photo = photos[sub];
   console.log(photos);
   let photoName = photo.split(',');
-  $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}.jpg`);
   $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}.jpg`);
   $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}.jpg`);
+  if (sub != "all") {
+    $("#subcat-portfolio").attr('href', `/Fa/subcategory?name=${sub}`);
+  }
+  $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}.jpg`);
 }
 
 $(document).ready(() => {
@@ -40,6 +43,7 @@ $(document).ready(() => {
       }
       let subcat = subcats[0];
       let locElement = `<a href="/Fa">خانه</a> / ${subcat.category}`;
+      document.title = `${subcat.category} - کما استودیو`;
       $("#top-bar-location").append(locElement);
       $("#top-bar-address").text(subcat.category);
     } else {
