@@ -2,12 +2,17 @@ var url = document.URL;
 var name = url.split('?name=')[1];
 
 var descriptions = {};
+var photos = {};
 
-showSub('all');
 
 function showSub(sub) {
-  console.log(descriptions[sub]);
   $(".category-text").text(descriptions[sub]);
+  let photo = photos[sub];
+  console.log(photos);
+  let photoName = photo.split(',');
+  $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}.jpg`);
+  $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}.jpg`);
+  $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}.jpg`);
 }
 
 $(document).ready(() => {
@@ -16,17 +21,22 @@ $(document).ready(() => {
       let subcats = response.res;
       for (let i = 0; i < subcats.length; i++) {
         let subcat = subcats[i];
-        console.log(subcat);
         let enSubcat = subcat.en;
         let faSubcat = subcat.subcat;
         let description = subcat.description;
+        let photo = subcat.photos;
+
+        descriptions[enSubcat] = description;
+        photos[enSubcat] = photo;
+
         let element = `<li><a href="" onClick="showSub('${enSubcat}')">${faSubcat}</a></li>`;
-        console.log(enSubcat);
+
         if (enSubcat == "all") {
           element = `<li><a href="" class="active" data-filter="*" onClick="showSub('${enSubcat}')">همه</a></li>`;
+          showSub('all');
         }
+
         $(".portfolio_filter").append(element);
-        descriptions[enSubcat] = description;
       }
       let subcat = subcats[0];
       let locElement = `<a href="/Fa">خانه</a> / ${subcat.category}`;
