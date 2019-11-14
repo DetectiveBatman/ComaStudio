@@ -10,9 +10,15 @@ function showSub(sub) {
   let photo = photos[sub];
   let photoName = photo.split(',');
   $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}.jpg`);
-  $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}.jpg`);
   if (sub != "all") {
+    $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}.jpg`);
     $("#subcat-portfolio").attr('href', `/Fa/subcategory?name=${sub}`);
+    $("#portfolio-show").css('display', 'block');
+    $("#category-photo-sec").css('display', 'none');
+  } else {
+    $("#category-photo-sec").css('display', 'block');
+    $("#category-photo-sec").attr('src', `../lib/assets/${photoName[0]}.jpg`);
+    $("#portfolio-show").css('display', 'none');
   }
   $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}.jpg`);
 }
