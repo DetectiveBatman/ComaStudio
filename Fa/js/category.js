@@ -8,7 +8,6 @@ var photos = {};
 function showSub(sub) {
   $(".category-text").text(descriptions[sub]);
   let photo = photos[sub];
-  console.log(photos);
   let photoName = photo.split(',');
   $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}.jpg`);
   $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}.jpg`);
@@ -22,6 +21,7 @@ $(document).ready(() => {
   $.post('/api/getSubcats', {category: name}, (response) => {
     if (response.ok == 'true') {
       let subcats = response.res;
+
       for (let i = 0; i < subcats.length; i++) {
         let subcat = subcats[i];
         let enSubcat = subcat.en;
@@ -41,50 +41,18 @@ $(document).ready(() => {
 
         $(".portfolio_filter").append(element);
       }
+
       let subcat = subcats[0];
+      let header = subcat.header + '.jpg';
       let locElement = `<a href="/Fa">خانه</a> / ${subcat.category}`;
       document.title = `${subcat.category} - کما استودیو`;
       $("#top-bar-location").append(locElement);
       $("#top-bar-address").text(subcat.category);
+      $(".top-bar").css('background', `-webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${header})`);
+      $(".top-bar").css('background', `linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${header})`);
+
     } else {
       alert('خطا رخ داده‌ است. لطفا دوباره تلاش کنید');
     }
   });
-
-  /* $.post('/api/getPortfolio', {category: name} , (response) => {
-    if (response.ok == 'true') {
-      var items = response.res;
-      console.log(response);
-      for (let i = 0; i < items.length; i++){
-        var item = items[i];
-        let img = `../lib/assets/${item.img}.jpg`;
-        let category = item.category;
-        let subcat = item.subcat;
-        let title = item.title;
-        let id = item.id;
-        let elements = `
-        <!-- single work -->
-        <div class="col-md-4 col-sm-6 ${subcat} ${category}">
-            <a href="single-project.html?id=${id}" class="portfolio_item">
-                <img src="${img}" alt="image" class="img-responsive" />
-                <div class="portfolio_item_hover">
-                    <div class="portfolio-border clearfix">
-                        <div class="item_info">
-                            <span>${title}</span>
-                            <em style='letter-spacing: 0;'>${categories[category]} / ${subcategories[subcat]}</em>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <!-- end single work -->
-        `;
-        $(".portfolio_container").append(elements);
-      }
-    } else {
-      alert('ناموفق بود...')
-    }
-  });
-  let height = $("#category-descriptions").height() + 120;
-  $("#category-item-div").css('margin-top', height);*/
 });
