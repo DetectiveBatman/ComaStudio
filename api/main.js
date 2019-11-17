@@ -22,6 +22,8 @@ module.exports = function launchAPI(app, db) {
       });
     });
 
+    /* Subcats */
+
     app.post('/api/getSubcats', (req, res, next) => {
       function getQuery(req) {
         if (req.body.category) {
@@ -40,6 +42,27 @@ module.exports = function launchAPI(app, db) {
             res: resp
           });
         });
+
+    });
+
+    /* news */
+
+    app.post('/api/getNews', (req, res, next) => {
+      function getQuery(req) {
+        let parameter = req.body;
+        if (parameter.newsId) {
+          return `SELECT * FROM news WHERE id='${parameter.newsId}'`;
+        }
+      }
+      db.query(getQuery(req), (err, resp, fld) => {
+          if (err) console.error(err);
+
+
+          res.json({
+            ok: 'true',
+            res: resp
+          });
+      });
 
     });
 }

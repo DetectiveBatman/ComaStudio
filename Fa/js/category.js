@@ -38,10 +38,10 @@ $(document).ready(() => {
         descriptions[enSubcat] = description;
         photos[enSubcat] = photo;
 
-        let element = `<li><a href="" onClick="showSub('${enSubcat}')">${faSubcat}</a></li>`;
+        let element = `<li><a href="#" onClick="showSub('${enSubcat}')">${faSubcat}</a></li>`;
 
         if (enSubcat == "all") {
-          element = `<li><a href="" class="active" data-filter="*" onClick="showSub('${enSubcat}')">همه</a></li>`;
+          element = `<li><a href="#" class="active" data-filter="*" onClick="showSub('${enSubcat}')">همه</a></li>`;
           showSub('all');
         }
 

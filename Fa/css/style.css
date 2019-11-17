@@ -1238,6 +1238,11 @@ textarea:focus {
   letter-spacing: 0;
 }
 
+#about-title {
+  direction: rtl !important;
+}
+
+
 /* Index.html */
 #top-footage {
   right: 0;
@@ -1518,4 +1523,31 @@ textarea:focus {
 .footer-menu ul li a:hover {
   color: #8e8e8e;
   text-decoration: none;
+}
+
+
+/* News Codes */
+#news-container {
+  display: flex;
+  padding-top: 60px;
+  flex-direction: column;
+}
+
+#news-photo-parent {
+  width: 100%;
+  float: right;
+  display: flex;
+}
+
+#news-photo {
+  height: 500px;
+  float: right;
+  margin: 0 auto;
+}
+
+#news-text {
+  margin-top: 10px;
+  float: right;
+  direction: rtl;
+  font-size: 16px;
 }
