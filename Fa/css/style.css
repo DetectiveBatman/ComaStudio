@@ -1551,3 +1551,54 @@ textarea:focus {
   direction: rtl;
   font-size: 16px;
 }
+
+/* News Page */
+#newsPage-ul {
+  float: right;
+  width: 100%;
+}
+
+.newsPage-li {
+  float: right;
+  margin: 0 20px;
+  list-style: none;
+}
+
+.newsPage-a {
+  float: right;
+  text-decoration: none;
+  color: #000;
+}
+
+.newsPage-a:hover {
+  cursor: pointer;
+  color: #ccc;
+}
+
+.newsPage-a:active {
+  color: #ccc;
+}
+
+.newsPage-img {
+  float: right;
+  width: 300px;
+  margin-left: 10px;
+}
+
+.newsPage-title {
+  float: right;
+  direction: rtl;
+  width: calc(100% - 310px);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.newsPage-preview {
+  float: right;
+  width: calc(100% - 310px);
+  direction: rtl;
+  text-align: right;
+  font-size: 16px;
+  margin-top: 20px;
+}

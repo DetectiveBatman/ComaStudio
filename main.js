@@ -34,8 +34,12 @@ app.get('/Fa/subcategory', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/subcat.html');
 });
 
-app.get('/Fa/news', (req, res, next) => {
+app.get('/Fa/newsPage', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/news.html');
+});
+
+app.get('/Fa/news', (req, res, next) => {
+  res.sendFile(__dirname + '/Fa/news-page.html');
 });
 
 api(app, db);

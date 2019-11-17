@@ -52,6 +52,8 @@ module.exports = function launchAPI(app, db) {
         let parameter = req.body;
         if (parameter.newsId) {
           return `SELECT * FROM news WHERE id='${parameter.newsId}'`;
+        } else {
+          return`SELECT * FROM news`;
         }
       }
       db.query(getQuery(req), (err, resp, fld) => {
