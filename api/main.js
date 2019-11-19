@@ -57,8 +57,7 @@ module.exports = function launchAPI(app, db) {
         }
       }
       db.query(getQuery(req), (err, resp, fld) => {
-          if (err) console.error(err);
-
+          if (err) console.log(err);
 
           res.json({
             ok: 'true',
@@ -66,5 +65,23 @@ module.exports = function launchAPI(app, db) {
           });
       });
 
+    });
+
+    /* users */
+
+    app.post('/api/getUsers', (req, res, next) => {
+      function getQuery(req){
+        let parameter = req.body;
+        return `SELECT id, username, photo, biography, role, name FROM users`;
+      }
+
+      db.query(getQuery(req), (err, resp, fld) => {
+        if (err) console.log(err);
+
+        res.json({
+          ok: 'true',
+          res: resp
+        });
+      });
     });
 }
