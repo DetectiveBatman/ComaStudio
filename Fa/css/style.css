@@ -1602,3 +1602,12 @@ textarea:focus {
   font-size: 16px;
   margin-top: 20px;
 }
+
+/* radio page */
+#radio-description {
+  float: right;
+  direction: rtl;
+  margin: 10px 150px;
+  font-size: 16px;
+  
+}

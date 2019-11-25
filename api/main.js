@@ -84,4 +84,21 @@ module.exports = function launchAPI(app, db) {
         });
       });
     });
+
+    /* Radio */
+    app.post('/api/getRadio', (req, res, next) => {
+      function getQuery(req){
+        let parameter = req.body;
+        return `SELECT * FROM radio`;
+      }
+
+      db.query(getQuery(req), (err, resp, fld) => {
+        if (err) console.log(err);
+
+        res.json({
+          ok: 'true',
+          res: resp
+        });
+      });
+    });
 }
