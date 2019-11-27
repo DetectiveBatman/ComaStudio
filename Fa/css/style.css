@@ -1183,6 +1183,10 @@ textarea:focus {
 
 /* General */
 
+.box-primary-nav {
+  padding: 80px 0 0 !important;
+}
+
 .item_info span {
   float: right;
   display: flex !important;
@@ -1609,5 +1613,17 @@ textarea:focus {
   direction: rtl;
   margin: 10px 150px;
   font-size: 16px;
-  
+}
+
+#audio-div {
+  float: right;
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+}
+
+#audio-player {
+  float: right;
+  margin: 0 auto;
+  outline: none;
 }

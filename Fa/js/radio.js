@@ -5,7 +5,14 @@ $(document).ready(() => {
       let file = podcast.file;
       let description = podcast.description;
       $("#radio-description").text(description);
-      $("#audio-file").attr('src', `../lib/radio/${file}`);
+      let audio = `
+      <div id="audio-div">
+      <audio id="audio-player" preload="auto" controls>
+          <source id="audio-file" src="../lib/radio/${file}" type="audio/mpeg">
+          مرورگر شما از این قابلیت پشتیبانی نمی‌کند
+      </audio>
+      </div>`;
+      $(".main-container").append(audio);
     } else {
       alert('خطا رخ داده است.');
     }
