@@ -42,6 +42,11 @@ app.get('/Fa/news', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/news-page.html');
 });
 
+app.get('/Fa/user', (req, res, next) => {
+  res.sendFile(__dirname + '/Fa/user.html');
+});
+
+
 api(app, db);
 
 app.listen(port);

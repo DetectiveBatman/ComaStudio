@@ -6,10 +6,10 @@ module.exports = function launchAPI(app, db) {
           return `SELECT * FROM portfolio WHERE id=${req.body.id}`;
         } else if (req.body.subcategory) {
           return `SELECT * FROM portfolio WHERE subcat='${req.body.subcategory}'`;
+        } else if (req.body.artist) {
+          return `SELECT * FROM portfolio WHERE artist='${req.body.artist}'`;
         }
-        else {
-          return `SELECT * FROM portfolio`;
-        }
+        return `SELECT * FROM portfolio`;
       }
 
       db.query(getQuery(req), (err, resp, fld) => {
@@ -72,6 +72,9 @@ module.exports = function launchAPI(app, db) {
     app.post('/api/getUsers', (req, res, next) => {
       function getQuery(req){
         let parameter = req.body;
+        if (parameter.username) {
+          return `SELECT id, username, photo, biography, role, name FROM users WHERE username='${parameter.username}'`;
+        }
         return `SELECT id, username, photo, biography, role, name FROM users`;
       }
 
