@@ -23,7 +23,7 @@ $(document).ready(() => {
   $.post('/api/getPortfolio', {id: id}, (response) => {
     if (response.ok == 'true') {
       var item = response.res[0];
-      let img = `../lib/assets/${item.largeImg}.jpg`;
+      let img = `../lib/assets/${item.largeImg}`;
       let category = item.category;
       let subcat = item.subcat;
       let title = item.title;

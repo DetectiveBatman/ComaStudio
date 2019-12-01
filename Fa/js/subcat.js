@@ -9,7 +9,7 @@ $(document).ready(() => {
       let subcat = response.res[0];
       faName = subcat.subcat;
       category = subcat.category;
-      let header = subcat.header + '.jpg';
+      let header = subcat.header;
       let locElement = `<a href="/Fa">خانه</a> / ${category} / ${faName}`;
       document.title = `${faName} - کما استودیو`;
       $("#top-bar-location").append(locElement);
@@ -25,7 +25,7 @@ $(document).ready(() => {
       console.log(response);
       for (let i = 0; i < items.length; i++){
         var item = items[i];
-        let img = `../lib/assets/${item.img}.jpg`;
+        let img = `../lib/assets/${item.img}`;
         let subcat = item.subcat;
         let title = item.title;
         let id = item.id;

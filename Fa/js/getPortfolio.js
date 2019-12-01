@@ -24,7 +24,7 @@ $(document).ready(() => {
       console.log(response);
       for (let i = 0; i < items.length; i++){
         var item = items[i];
-        let img = `../lib/assets/${item.img}.jpg`;
+        let img = `../lib/assets/${item.img}`;
         let category = item.category;
         let subcat = item.subcat;
         let title = item.title;

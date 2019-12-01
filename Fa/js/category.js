@@ -9,18 +9,18 @@ function showSub(sub) {
   $(".category-text").text(descriptions[sub]);
   let photo = photos[sub];
   let photoName = photo.split(',');
-  $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}.jpg`);
+  $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}`);
   if (sub != "all") {
-    $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}.jpg`);
+    $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}`);
     $("#subcat-portfolio").attr('href', `/Fa/subcategory?name=${sub}`);
     $("#portfolio-show").css('display', 'block');
     $("#category-photo-sec").css('display', 'none');
   } else {
     $("#category-photo-sec").css('display', 'block');
-    $("#category-photo-sec").attr('src', `../lib/assets/${photoName[0]}.jpg`);
+    $("#category-photo-sec").attr('src', `../lib/assets/${photoName[0]}`);
     $("#portfolio-show").css('display', 'none');
   }
-  $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}.jpg`);
+  $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}`);
 }
 
 $(document).ready(() => {
@@ -49,7 +49,7 @@ $(document).ready(() => {
       }
 
       let subcat = subcats[0];
-      let header = subcat.header + '.jpg';
+      let header = subcat.header;
       let locElement = `<a href="/Fa">خانه</a> / ${subcat.category}`;
       document.title = `${subcat.category} - کما استودیو`;
       $("#top-bar-location").append(locElement);
