@@ -15,8 +15,8 @@ $(document).ready(() => {
 
         let element = `
         <li class="newsPage-li">
+            <img class="newsPage-img" src="../lib/assets/${photo}">
             <a class="newsPage-a" href="/Fa/newsPage?newsId=${id}">
-              <img class="newsPage-img" src="../lib/assets/${photo}">
               <span class="newsPage-title">${title}</span>
               <span class="newsPage-preview">${preview}</span>
             </a>
@@ -26,7 +26,7 @@ $(document).ready(() => {
 
       }
 
-
+      document.title = 'اخبار - کما استودیو';
       //$(".top-bar").css('background', `-webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${backPhoto})`);
       //$(".top-bar").css('background', `linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${backPhoto})`);
     } else {

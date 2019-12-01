@@ -16,8 +16,8 @@ $(document).ready(() => {
       $("#news-photo").attr('src', `../lib/assets/${photo}`);
       $("#news-text").text(text);
 
-      $(".top-bar").css('background', `-webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${backPhoto})`);
-      $(".top-bar").css('background', `linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${backPhoto})`);
+      $(".top-bar").css('background', `-webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${photo})`);
+      $(".top-bar").css('background', `linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${photo})`);
 
       let locElement = `<a href="/Fa">خانه</a> / اخبار`;
 

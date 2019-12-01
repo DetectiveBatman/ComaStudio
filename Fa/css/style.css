@@ -1564,36 +1564,36 @@ textarea:focus {
 
 .newsPage-li {
   float: right;
-  margin: 0 20px;
+  margin: 10px 20px;
   list-style: none;
+  width: 100%;
 }
 
 .newsPage-a {
-  float: right;
   text-decoration: none;
-  color: #000;
+  color: #393939;
 }
 
 .newsPage-a:hover {
   cursor: pointer;
-  color: #ccc;
+  color: #000;
 }
 
 .newsPage-a:active {
-  color: #ccc;
+  color: #000;
 }
 
 .newsPage-img {
   float: right;
-  width: 300px;
-  margin-left: 10px;
+  width: 250px;
+  margin-left: 20px;
 }
 
 .newsPage-title {
   float: right;
   direction: rtl;
   width: calc(100% - 310px);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   text-align: right;
 }
