@@ -12,9 +12,10 @@ $(document).ready(() => {
         let words = slice.split(' ');
         let preview = news.text.slice(0, 398 - [words.length - 1].length) + '...';
         let date = news.date;
+        let type = news.type;
 
         let element = `
-        <li class="newsPage-li">
+        <li class="newsPage-li ${type}">
             <img class="newsPage-img" src="../lib/assets/${photo}">
             <a class="newsPage-a" href="/Fa/newsPage?newsId=${id}">
               <span class="newsPage-title">${title}</span>
@@ -32,5 +33,20 @@ $(document).ready(() => {
     } else {
       alert('لطفا دوباره تلاش کنید.');
     }
+
+    var posts = $('.newsPage-li');
+    var defcat = $(".news-cats div li a .active").data('filter');
+
+    posts.filter(defcat).show();
+
+    $(".news-cats div li a").click(function() {
+      // Get data of category
+      var customType = $(this).data('filter'); // category
+      $(".active").attr('class', '');
+      $(this).attr('class', 'active');
+      posts.hide();
+      posts.filter(`${customType}`).show();
+    });
+
   });
 });

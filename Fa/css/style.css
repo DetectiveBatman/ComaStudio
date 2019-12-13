@@ -1665,6 +1665,48 @@ textarea:focus {
   margin-top: 20px;
 }
 
+.news-cats {
+  float: right;
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.news-cats div {
+  margin: 0 auto;
+  width: 200px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.news-cats div li {
+  float: right;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.news-cats div li a {
+  color: #60606e !important;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.news-cats div li a:hover {
+  cursor: pointer;
+  border: 2px solid #ffbf00 !important;
+  color: #ffbf00 !important;
+  border-radius: 3px;
+}
+
+.news-cats div li a[class=active] {
+  border: 2px solid #ffbf00 !important;
+  color: #ffbf00 !important;
+  border-radius: 3px;
+}
+
+
+
 /* radio page */
 #radio-description {
   float: right;
