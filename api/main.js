@@ -104,4 +104,17 @@ module.exports = function launchAPI(app, db) {
         });
       });
     });
+
+    /* About Us */
+    app.post('/api/getAboutUs', (req, res, next) => {
+      let sql = `SELECT * FROM aboutUs WHERE id='1'`;
+      db.query(sql, (err, resp, fld) => {
+        if (err) console.log(err);
+
+        res.json({
+          ok: 'true',
+          res: resp
+        });
+      });
+    });
 }
