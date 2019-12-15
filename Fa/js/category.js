@@ -46,16 +46,20 @@ $(document).ready(() => {
         }
 
         $(".portfolio_filter").append(element);
+
+        if (enSubcat == 'all') {
+          let header = subcat.header;
+          $(".top-bar").css('background', `-webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${header})`);
+          $(".top-bar").css('background', `linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${header})`);
+        }
       }
 
       let subcat = subcats[0];
-      let header = subcat.header;
       let locElement = `<a href="/Fa">خانه</a> / ${subcat.category}`;
       document.title = `${subcat.category} - کما استودیو`;
       $("#top-bar-location").append(locElement);
       $("#top-bar-address").text(subcat.category);
-      $(".top-bar").css('background', `-webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${header})`);
-      $(".top-bar").css('background', `linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${header})`);
+
 
     } else {
       alert('خطا رخ داده‌ است. لطفا دوباره تلاش کنید');
