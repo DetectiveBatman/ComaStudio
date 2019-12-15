@@ -132,4 +132,52 @@ module.exports = function launchAPI(app, db) {
         });
       });
     });
+
+    app.post('/api/message', (req, res, next) => {
+      function getQuery(req){
+        let parameter = req.body;
+        if (parameter.getMessages) {
+          return `SELECT * FROM messages`;
+        } else {
+          if (parameter.email && parameter.name && parameter.subject && parameter.text) {
+            return `INSERT INTO messages (email, name, text, subject) VALUES (
+              '${parameter.email}',
+              '${parameter.name}',
+              '${parameter.text}',
+              '${parameter.subject}'
+            )`;
+          } else {
+            return false;
+          }
+        }
+      }
+
+      let query = getQuery(req);
+      if (query != false) {
+        if (query[0] == 'S') {
+          db.query(query, (err, resp, fld) => {
+            if (err) console.log(err);
+
+            res.json({
+              ok: true,
+              res: resp
+            });
+          });
+
+        } else {
+          db.query(query, (err, resp, fld) => {
+            if (err) console.log(err);
+
+            res.json({
+              ok: true
+            });
+          });
+        }
+      } else {
+        res.json({
+          ok: false
+        });
+      }
+    });
+
 }
