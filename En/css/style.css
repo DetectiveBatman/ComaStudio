@@ -1178,6 +1178,72 @@ textarea:focus {
     }
 }
 
+/* General */
+
+.box-primary-nav {
+  padding: 80px 0 0 !important;
+}
+
+.item_info span {
+  float: right;
+  display: flex !important;
+  width: 100%;
+}
+
+.item_info span div {
+  float: right;
+  border-bottom: 2px solid #ffbf00;
+  margin: 0 auto;
+}
+
+.top-bar {
+  background: -webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/01.jpg);
+  background: linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/01.jpg);
+  color: #313131;
+}
+
+.top-bar h1 {
+  color: #313131;
+}
+
+.top-bar p, .top-bar p a {
+  color: #313131;
+}
+
+.yellow-line {
+  height: 1px;
+  width: 100%;
+  float: right;
+  display: flex;
+}
+
+.yellow-line i {
+  background-color: #ffbf00;
+  height: 100%;
+  width: 100px;
+  float: right;
+  margin: 0 auto;
+}
+
+.box-logo {
+  padding-top: 6px;
+}
+
+.box-primary-nav {
+  padding: 100px 0 0;
+}
+
+.portfolio_item .portfolio_item_hover .item_info em {
+  background: none;
+  color: #FFF;
+  letter-spacing: 0;
+}
+
+#about-title {
+  direction: rtl !important;
+}
+
+
 /* index.html */
 
 #top-footage {
@@ -1189,4 +1255,206 @@ textarea:focus {
   object-fit: cover;
   opacity: 0.7;
   /* position: fixed; */
+}
+
+/** Footer Style **/
+.footer-menu {
+  float: right;
+  width: 100%;
+  display: flex;
+}
+
+.footer-menu ul {
+  float: right;
+  display: flex;
+  width: 60%;
+  direction: rtl;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.footer-menu ul li {
+  float: right;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.footer-menu ul li a {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.footer-menu ul li a:hover {
+  color: #8e8e8e;
+  text-decoration: none;
+}
+
+/* Single Project */
+#project-description {
+  float: right;
+  direction: rtl;
+  font-size: 18px;
+}
+
+.cat-ul {
+  float: right;
+  width: 100%;
+  direction: rtl;
+}
+
+#category-descriptions {
+  float: right;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.category-text {
+  float: left;
+  direction: ltr;
+  margin-left: 15%;
+  width: 35%;
+  font-size: 18px;
+}
+
+#category-media {
+  margin-right: 15%;
+  float: right;
+  width: 25%;
+}
+
+.category-media {
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.profile-photos {
+  float: right;
+}
+
+.profile-description {
+  direction: rtl;
+  text-align: right;
+}
+
+.profile-social {
+  float: right;
+  margin: 0 auto;
+}
+
+#artists-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  text-align: center;
+}
+
+.about-user {
+  width: 230px;
+  border-radius: 3px;
+  border: #f3f3f3 solid 2px;
+  float: right;
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(243,243,243,1);
+  -moz-box-shadow: 0px 0px 11px 1px rgba(243,243,243,1);
+  box-shadow: 0px 0px 11px 1px rgba(243,243,243,1);
+  margin: 0 auto;
+}
+
+.about-user img {
+  border-radius: 3px 3px 0 0;
+}
+
+.profile-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 2px;
+}
+
+.profile-info h3, .profile-info h5 {
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+#about-title-parent {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.team-img {
+  width: 100%;
+  float: right;
+}
+
+.user-name {
+  float: right !important;
+}
+
+.team-member {
+  width: 200px !important;
+}
+
+#about-title {
+  font-size: 35px;
+  font-weight: bold;
+  color: #393939;
+  padding-bottom: 5px;
+  border-bottom: 1px #f3f3f3 solid;
+}
+
+#about-subtitle {
+  font-size: 14px;
+}
+
+.about-user {
+  position: relative;
+  overflow-y: hidden;
+}
+
+@keyframes infoMove {
+  100% {bottom: 0px;}
+}
+
+@keyframes infoMoveBack {
+  100% {bottom: -90px;}
+}
+
+.profile-info {
+  position: absolute;
+  bottom: -90px;
+  background: #0e0e0ea6;
+  height: 90px;
+  animation: infoMoveBack 1s;
+}
+
+.about-user:hover {
+  cursor: pointer;
+}
+
+.about-user:hover .profile-info {
+  animation: infoMove 1s;
+  animation-fill-mode: forwards;
+}
+
+.profile-info h3 {
+  color: #FFF;
+}
+
+.user-profile {
+  color: #ccc;
+  direction: ltr;
+  text-decoration: none;
+}
+
+.user-profile i {
+  margin-right: 5px;
+}
+
+.user-profile:hover {
+  text-decoration: none;
+  color: #FFF;
 }

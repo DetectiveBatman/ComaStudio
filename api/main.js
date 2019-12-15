@@ -122,7 +122,11 @@ module.exports = function launchAPI(app, db) {
 
     /* About Us */
     app.post('/api/getAboutUs', (req, res, next) => {
-      let sql = `SELECT * FROM aboutUs WHERE id='1'`;
+      if (req.body.lang == 'en') {
+        var sql = `SELECT * FROM aboutUs WHERE en='true'`;
+      } else {
+        var sql = `SELECT * FROM aboutUs WHERE en='false'`;
+      }
       db.query(sql, (err, resp, fld) => {
         if (err) console.log(err);
 

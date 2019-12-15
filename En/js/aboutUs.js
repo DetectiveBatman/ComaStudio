@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $.post('/api/getAboutUs', {lang: 'fa'}, (response) => {
+  $.post('/api/getAboutUs', {lang: 'en'}, (response) => {
     let description = response.res[0].description;
     let photoName = response.res[0].photos.split(',');
 
