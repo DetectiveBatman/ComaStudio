@@ -45,6 +45,21 @@ module.exports = function launchAPI(app, db) {
 
     });
 
+    /* Categories */
+
+    app.post('/api/getCategories', (req, res, next) => {
+      let sql = `SELECT * FROM categories`;
+      db.query(sql, (err, resp, fld) => {
+          if (err) console.error(err);
+
+          res.json({
+            ok: 'true',
+            res: resp
+          });
+        });
+
+    });
+
     /* news */
 
     app.post('/api/getNews', (req, res, next) => {
