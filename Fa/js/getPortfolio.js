@@ -18,6 +18,25 @@ var subcategories = {
 function getCat(cat){return categories.cat};
 
 $(document).ready(() => {
+
+  $.post('/api/getCategories', (response) => {
+    if (response.ok == 'true') {
+      let cats = response.res;
+      for (let i = 0; i < cats.length; i++) {
+        let cat = cats[i];
+        let en = cat.en;
+        let fa = cat.fa;
+        let element = `
+        <li><a target="_blank" and rel="noopener noreferrer" href="./category?name=${en}">${fa}</a></li>`;
+        $(".categories-ul").append(element);
+      }
+
+      let element = `
+      <li><a  href="./portfolio.html" class="active" data-filter="*">همه</a></li>`;
+      $(".categories-ul").append(element);
+    }
+  });
+
   $.post('/api/getPortfolio', (response) => {
     if (response.ok == 'true') {
       var items = response.res;
