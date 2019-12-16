@@ -1289,8 +1289,92 @@ textarea:focus {
   text-decoration: none;
 }
 
-/* Single Project */
 
+#category-media {
+  float: left;
+  width: 25%;
+}
+
+.category-media {
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.category-text {
+  float: left;
+  direction: ltr;
+  margin-left: 15%;
+  width: 35%;
+  font-size: 18px;
+}
+
+#category-media {
+  margin-right: 15%;
+  float: right;
+  width: 25%;
+}
+
+/* radio page */
+#radio-description {
+  float: left;
+  direction: ltr;
+  margin: 10px 150px;
+  font-size: 16px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#audio-div {
+  float: left;
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+}
+
+#audio-player {
+  float: left;
+  margin: 0 auto;
+  outline: none;
+}
+
+
+/* Single Project */
+#project-description {
+  float: right;
+  direction: rtl;
+  font-size: 18px;
+}
+
+.cat-ul {
+  float: right;
+  width: 100%;
+  direction: rtl;
+}
+
+#category-descriptions {
+  float: right;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+
+.profile-photos {
+  float: right;
+}
+
+.profile-description {
+  direction: rtl;
+  text-align: right;
+}
+
+.profile-social {
+  float: right;
+  margin: 0 auto;
+}
 
 #artists-container {
   display: flex;
