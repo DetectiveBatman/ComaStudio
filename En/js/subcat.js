@@ -7,11 +7,12 @@ $(document).ready(() => {
   $.post('/api/getSubcats', {subcat: name}, (response) => {
     if (response.ok == 'true') {
       let subcat = response.res[0];
-      faName = subcat.subcat;
-      category = subcat.category;
+      console.log(subcat);
+      faName = subcat.en;
+      category = subcat.enCategory;
       let header = subcat.header;
-      let locElement = `<a href="/Fa">خانه</a> / ${category} / ${faName}`;
-      document.title = `${faName} - کما استودیو`;
+      let locElement = `<a href="/En">Home</a> / ${category} / ${faName}`;
+      document.title = `${faName} - Coma Studio`;
       $("#top-bar-location").append(locElement);
       $("#top-bar-address").text(faName);
       $(".top-bar").css('background', `-webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${header})`);
@@ -27,12 +28,12 @@ $(document).ready(() => {
         var item = items[i];
         let img = `../lib/assets/${item.img}`;
         let subcat = item.subcat;
-        let title = item.title;
+        let title = item.enTitle;
         let id = item.id;
         let elements = `
         <!-- single work -->
 
-        <div class="col-md-4 col-sm-6 ${subcat} ${item.category}">
+        <div class="col-md-4 col-sm-6 ${subcat} ${category}">
             <a href="single-project.html?id=${id}" class="portfolio_item">
                 <img src="${img}" alt="image" class="img-responsive" />
                 <div class="portfolio_item_hover">
@@ -52,7 +53,7 @@ $(document).ready(() => {
         $(".portfolio_container").append(elements);
       }
     } else {
-      alert('خطا رخ داده‌ است. لطفا دوباره تلاش کنید');
+      alert('Error');
     }
   });
 });
