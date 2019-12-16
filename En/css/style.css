@@ -1290,60 +1290,7 @@ textarea:focus {
 }
 
 /* Single Project */
-#project-description {
-  float: right;
-  direction: rtl;
-  font-size: 18px;
-}
 
-.cat-ul {
-  float: right;
-  width: 100%;
-  direction: rtl;
-}
-
-#category-descriptions {
-  float: right;
-  width: 100%;
-  height: auto;
-  position: relative;
-  margin-bottom: 60px;
-}
-
-.category-text {
-  float: left;
-  direction: ltr;
-  margin-left: 15%;
-  width: 35%;
-  font-size: 18px;
-}
-
-#category-media {
-  margin-right: 15%;
-  float: right;
-  width: 25%;
-}
-
-.category-media {
-  float: left;
-  width: 100%;
-  height: auto;
-  padding: 0;
-}
-
-.profile-photos {
-  float: right;
-}
-
-.profile-description {
-  direction: rtl;
-  text-align: right;
-}
-
-.profile-social {
-  float: right;
-  margin: 0 auto;
-}
 
 #artists-container {
   display: flex;

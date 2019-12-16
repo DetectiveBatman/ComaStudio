@@ -10,18 +10,18 @@ $(document).ready(() => {
       let img = `../lib/assets/${item.largeImg}`;
       let category = item.category;
       let subcat = item.subcat;
-      let title = item.title;
-      let description = item.description;
+      let title = item.enTitle;
+      let description = item.enDescription;
 
-      document.title = title + ' - کما استودیو';
+      document.title = title + ' - Coma Studio';
       $("#top-bar-title").text(title);
       $("#top-bar-prtitle").text(title);
       $("#project-title").text(title);
       $("#project-image").attr('src', img);
       $("#project-description").text(description);
-      let catItem = `<li><i class="ion-ios-circle-filled"></i> ${item.faCat}</li>`
+      let catItem = `<li><i class="ion-ios-circle-filled"></i> ${category}</li>`
       $(".cat-ul").append(catItem);
-      let subcatItem = `<li><i class="ion-ios-circle-filled"></i> ${item.faSub}</li>`
+      let subcatItem = `<li><i class="ion-ios-circle-filled"></i> ${subcat}</li>`
       $(".cat-ul").append(subcatItem);
     } else {
       alert('ناموفق بود...')
