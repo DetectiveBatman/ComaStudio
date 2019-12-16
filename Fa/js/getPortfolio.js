@@ -1,22 +1,3 @@
-var categories = {
-  photography: 'آتلیه عکاسی',
-  music: 'ضبط و میکس',
-  film: 'فیلم و فیلم کوتاه',
-  modeling: 'طراحی و مدل سازی',
-  media: 'مدیا',
-  ads: 'تبلیغات',
-  branding: 'برندسازی',
-  visualIdentity: 'هویت بصری',
-  festival: 'نمایشگاه'
-}
-
-var subcategories = {
-  space: 'فضاسازی',
-  logo: 'لوگو'
-}
-
-function getCat(cat){return categories.cat};
-
 $(document).ready(() => {
 
   $.post('/api/getCategories', (response) => {
@@ -58,7 +39,7 @@ $(document).ready(() => {
                     <div class="portfolio-border clearfix">
                         <div class="item_info">
                             <span><div>${title}</div></span>
-                            <em style='letter-spacing: 0;'>${categories[category]} / ${subcategories[subcat]}</em>
+                            <em style='letter-spacing: 0;'>${item.faCat} / ${item.faSub}</em>
                         </div>
                     </div>
                 </div>

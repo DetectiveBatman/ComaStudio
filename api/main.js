@@ -14,11 +14,24 @@ module.exports = function launchAPI(app, db) {
 
       db.query(getQuery(req), (err, resp, fld) => {
         if (err) console.error(err);
+        var result = resp;
+        for (let i = 0; i < resp.length; i++){
+          let portfolio_item = resp[i];
+          let subcategory = portfolio_item.subcat;
+          let sql = `SELECT * FROM subcategories WHERE en='${subcategory}'`;
+          db.query(sql, (err1, resp1, fld1) => {
+            if (err1) console.log(err1);
 
-        res.json({
-          ok: 'true',
-          res: resp
-        });
+            result[i].faSub = resp1[0].subcat;
+            result[i].faCat = resp1[0].category;
+            if (i == resp.length - 1) {
+              res.json({
+                ok: 'true',
+                res: result
+              });
+            }
+          });
+        }
       });
     });
 
