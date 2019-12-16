@@ -1458,3 +1458,11 @@ textarea:focus {
   text-decoration: none;
   color: #FFF;
 }
+
+.categories-ul {
+  padding-left: 0;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
