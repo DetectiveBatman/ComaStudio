@@ -30,8 +30,16 @@ app.get('/Fa/category', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/category.html');
 });
 
+app.get('/En/category', (req, res, next) => {
+  res.sendFile(__dirname + '/En/category.html');
+});
+
 app.get('/Fa/subcategory', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/subcat.html');
+});
+
+app.get('/En/subcategory', (req, res, next) => {
+  res.sendFile(__dirname + '/En/subcat.html');
 });
 
 app.get('/Fa/newsPage', (req, res, next) => {
@@ -44,6 +52,18 @@ app.get('/Fa/news', (req, res, next) => {
 
 app.get('/Fa/user', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/user.html');
+});
+
+app.get('/En/newsPage', (req, res, next) => {
+  res.sendFile(__dirname + '/En/news.html');
+});
+
+app.get('/En/news', (req, res, next) => {
+  res.sendFile(__dirname + '/En/news-page.html');
+});
+
+app.get('/En/user', (req, res, next) => {
+  res.sendFile(__dirname + '/En/user.html');
 });
 
 
