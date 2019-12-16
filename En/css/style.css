@@ -1588,3 +1588,29 @@ textarea:focus {
   color: #ffbf00 !important;
   border-radius: 3px;
 }
+
+/* News Codes */
+#news-container {
+  display: flex;
+  padding-top: 60px;
+  flex-direction: column;
+}
+
+#news-photo-parent {
+  width: 100%;
+  float: left;
+  display: flex;
+}
+
+#news-photo {
+  height: 500px;
+  float: left;
+  margin: 0 auto;
+}
+
+#news-text {
+  margin-top: 10px;
+  float: left;
+  direction: ltr;
+  font-size: 16px;
+}
