@@ -13,12 +13,12 @@ function showSub(sub) {
   if (sub != "all") {
     $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}`);
     $("#subcat-portfolio").attr('href', `/Fa/subcategory?name=${sub}`);
-    $("#portfolio-show").css('display', 'block');
+    $("#special-img").css('display', 'block');
     $("#category-photo-sec").css('display', 'none');
   } else {
     $("#category-photo-sec").css('display', 'block');
     $("#category-photo-sec").attr('src', `../lib/assets/${photoName[0]}`);
-    $("#portfolio-show").css('display', 'none');
+    $("#special-img").css('display', 'none');
   }
   $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}`);
 }
