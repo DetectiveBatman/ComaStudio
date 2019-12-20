@@ -3,16 +3,17 @@ var name = url.split('?name=')[1];
 
 var descriptions = {};
 var photos = {};
-
+var links = {};
 
 function showSub(sub) {
   $(".category-text").text(descriptions[sub]);
   let photo = photos[sub];
+  let link = links[sub] == '' ? `/Fa/subcategory?name=${sub}` : links[sub];
   let photoName = photo.split(',');
   $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}`);
   if (sub != "all") {
     $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}`);
-    $("#subcat-portfolio").attr('href', `/Fa/subcategory?name=${sub}`);
+    $("#subcat-portfolio").attr('href', link);
     $("#special-img").css('display', 'block');
     $("#category-photo-sec").css('display', 'none');
   } else {
@@ -34,9 +35,12 @@ $(document).ready(() => {
         let faSubcat = subcat.subcat;
         let description = subcat.description;
         let photo = subcat.photos;
+        let link = subcat.link;
 
         descriptions[enSubcat] = description;
         photos[enSubcat] = photo;
+        links[enSubcat] = link;
+
 
         let element = `<li><a href="#" onClick="showSub('${enSubcat}')">${faSubcat}</a></li>`;
 

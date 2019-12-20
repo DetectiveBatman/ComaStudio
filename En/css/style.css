@@ -1614,3 +1614,9 @@ textarea:focus {
   direction: ltr;
   font-size: 16px;
 }
+
+.portfolio .categories-grid .categories ul li a.active {
+    color: #ffbf00;
+    border: 2px solid #ffbf00;
+    background: none;
+}
