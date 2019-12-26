@@ -31,20 +31,20 @@ $(document).ready(() => {
         let id = item.id;
         let elements = `
         <!-- single work -->
-
-        <div class="col-md-4 col-sm-6 ${subcat} ${category}">
-            <a href="single-project.html?id=${id}" class="portfolio_item">
-                <img src="${img}" alt="image" class="img-responsive" />
-                <div class="portfolio_item_hover">
-                    <div class="portfolio-border clearfix">
-                        <div class="item_info">
-                            <span><div>${title}</div></span>
-                            <em style='letter-spacing: 0;'>${item.faCat} / ${item.faSub}</em>
-                        </div>
-                    </div>
-                </div>
+        <div class="special-img category-media">
+          <div id="category-media-content">
+            <img src="${img}" class="category-photo-2" alt="image" class="img-responsive">
+          </div>
+          <div class="gradient">
+            <a class="subcat-portfolio" href="single-project.html?id=${id}">
+              <div class="item_info">
+                <span><div>${title}</div></span>
+                <em style='letter-spacing: 0;'>${item.faCat} / ${item.faSub}</em>
+              </div>
             </a>
+          </div>
         </div>
+
 
         <!-- end single work -->
         `;
