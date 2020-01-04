@@ -1,6 +1,5 @@
 module.exports = function launchAPI(app, db) {
     app.post('/api/getPortfolio', (req, res, next) => {
-
       function getQuery(req) {
         if (req.body.id) {
           return `SELECT * FROM portfolio WHERE id=${req.body.id}`;
@@ -44,6 +43,9 @@ module.exports = function launchAPI(app, db) {
         }
         else if (req.body.subcat) {
           return `SELECT * FROM subcategories WHERE en='${req.body.subcat}'`;
+        }
+        else if (req.body.onlyCategory) {
+          return `SELECT * FROM subcategories WHERE en='all'`;
         }
       }
 
