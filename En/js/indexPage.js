@@ -1,4 +1,24 @@
 $(document).ready(() => {
+  var news = `
+  <!-- single work -->
+  <div class="col-md-3 col-sm-6">
+      <a href="/En/news" class="portfolio_item">
+          <img src="../lib/assets/10.jpg" alt="image" class="img-responsive" />
+          <div class="portfolio_item_hover">
+              <div class="portfolio-border clearfix">
+                  <div class="item_info">
+                      <span><div>News</div></span>
+                      <em>News Page</em>
+                  </div>
+              </div>
+          </div>
+      </a>
+  </div>
+  <!-- end single work -->
+  `;
+  $('.portfolio_container').append(news);
+
+
   $.post('/api/getSubcats', {onlyCategory: true}, (response) => {
     if (response.ok == 'true') {
       var categories = response.res;
