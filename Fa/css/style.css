@@ -1623,6 +1623,7 @@ textarea:focus {
 #newsPage-ul {
   float: right;
   width: 100%;
+  position: initial !important;
 }
 
 .newsPage-li {
