@@ -199,4 +199,25 @@ module.exports = function launchAPI(app, db) {
       }
     });
 
+    app.post('/api/deleteCat', (req, res, next) => {
+      if (req.body.id && req.body.en) {
+        let id = req.body.id;
+        let en = req.body.en;
+        let query = `DELETE FROM categories WHERE id='${id}' ; DELETE FROM subcategories WHERE enCategory='${en}'`;
+        db.query(query, (err, resp, fld) => {
+          if (err) console.log(err);
+          else {
+            res.json({
+              ok: true,
+              res: resp
+            });
+          }
+        });
+      } else {
+        res.json({
+          ok: false
+        });
+      }
+    });
+
 }
