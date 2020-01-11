@@ -204,7 +204,7 @@ module.exports = function launchAPI(app, db) {
       if (req.body.id && req.body.en) {
         let id = req.body.id;
         let en = req.body.en;
-        let query = `DELETE FROM categories WHERE id='${id}' ; DELETE FROM subcategories WHERE enCategory='${en}'`;
+        let query = `DELETE FROM categories WHERE id='${id}' ; DELETE FROM subcategories WHERE enCategory='${en}'; DELETE FROM portfolio WHERE category='${en}'`;
         db.query(query, (err, resp, fld) => {
           if (err) console.log(err);
           else {
@@ -225,7 +225,28 @@ module.exports = function launchAPI(app, db) {
       if (req.body.id && req.body.en) {
         let id = req.body.id;
         let en = req.body.en;
-        let query = `DELETE FROM subcategories WHERE en='${en}'`;
+        let query = `DELETE FROM subcategories WHERE en='${en}'; DELETE FROM portfolio WHERE subcat='${en}'`;
+        db.query(query, (err, resp, fld) => {
+          if (err) console.log(err);
+          else {
+            res.json({
+              ok: true,
+              res: resp
+            });
+          }
+        });
+      } else {
+        res.json({
+          ok: false
+        });
+      }
+    });
+
+    app.post('/api/deletePortfolio', (req, res, next) => {
+      if (req.body.id && req.body.en) {
+        let id = req.body.id;
+        let en = req.body.en;
+        let query = `DELETE FROM portfolio WHERE enTitle='${en}'`;
         db.query(query, (err, resp, fld) => {
           if (err) console.log(err);
           else {
