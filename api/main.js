@@ -47,6 +47,7 @@ module.exports = function launchAPI(app, db) {
         else if (req.body.onlyCategory) {
           return `SELECT * FROM subcategories WHERE en='all'`;
         }
+        return `SELECT * FROM subcategories`;
       }
 
       db.query(getQuery(req), (err, resp, fld) => {
@@ -204,6 +205,27 @@ module.exports = function launchAPI(app, db) {
         let id = req.body.id;
         let en = req.body.en;
         let query = `DELETE FROM categories WHERE id='${id}' ; DELETE FROM subcategories WHERE enCategory='${en}'`;
+        db.query(query, (err, resp, fld) => {
+          if (err) console.log(err);
+          else {
+            res.json({
+              ok: true,
+              res: resp
+            });
+          }
+        });
+      } else {
+        res.json({
+          ok: false
+        });
+      }
+    });
+
+    app.post('/api/deleteSubcat', (req, res, next) => {
+      if (req.body.id && req.body.en) {
+        let id = req.body.id;
+        let en = req.body.en;
+        let query = `DELETE FROM subcategories WHERE en='${en}'`;
         db.query(query, (err, resp, fld) => {
           if (err) console.log(err);
           else {
