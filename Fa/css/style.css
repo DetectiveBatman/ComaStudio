@@ -1612,8 +1612,7 @@ textarea:focus {
   margin: 0 auto;
 }
 
-#news-text {
-  margin-top: 10px;
+.news-text {
   float: right;
   direction: rtl;
   font-size: 16px;
