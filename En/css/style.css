@@ -1346,7 +1346,7 @@ textarea:focus {
 
 
 /* Single Project */
-#project-description {
+.project-description {
   float: right;
   direction: rtl;
   font-size: 18px;

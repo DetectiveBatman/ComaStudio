@@ -11,14 +11,20 @@ $(document).ready(() => {
       let category = item.category;
       let subcat = item.subcat;
       let title = item.title;
-      let description = item.description;
+      let description = item.description.split("<br />");
+      for (let i = 0; i < description.length; i++) {
+        let part = description[i];
+        let element = `
+        <p class="project-description">${part}</p>
+        `;
+        $("#description-parent").append(element);
+      }
 
       document.title = title + ' - کما استودیو';
       $("#top-bar-title").text(title);
       $("#top-bar-prtitle").text(title);
       $("#project-title").text(title);
       $("#project-image").attr('src', img);
-      $("#project-description").text(description);
       let catItem = `<li><i class="ion-ios-circle-filled"></i> ${item.faCat}</li>`
       $(".cat-ul").append(catItem);
       let subcatItem = `<li><i class="ion-ios-circle-filled"></i> ${item.faSub}</li>`
