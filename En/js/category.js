@@ -7,7 +7,8 @@ var links = {};
 
 
 function showSub(sub) {
-  $(".category-text").text(descriptions[sub]);
+  $(".category-text").remove();
+  $("#category-descriptions").append(descriptions[sub]);
   let photo = photos[sub];
   let link = links[sub] == '' ? `/En/subcategory?name=${sub}` : links[sub];
   let photoName = photo.split(',');
@@ -34,11 +35,19 @@ $(document).ready(() => {
         let subcat = subcats[i];
         let enSubcat = subcat.en;
         let faSubcat = subcat.subcat;
-        let description = subcat.enDescription;
+        let description = subcat.description.split('<br />');
+        let des = '';
+        for (let i = 0; i < description.length; i++) {
+          let part = description[i];
+          des += `
+          <span class="category-text">${part}</span>
+          `;
+        }
+
         let photo = subcat.photos;
         let link = subcat.link;
 
-        descriptions[enSubcat] = description;
+        descriptions[enSubcat] = des;
         photos[enSubcat] = photo;
         links[enSubcat] = link;
 
