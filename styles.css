@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @font-face {
   font-family: yekan;
   src: url('./Fa/fonts/Yekan.ttf');
 }
+*/
+
+@font-face {
+  font-family: Lobster;
+  src: url('./Fa/fonts/CenturyGothic.ttf');
+}
+
 
 * {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster';
 }
 
 html, body {
