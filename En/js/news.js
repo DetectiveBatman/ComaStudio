@@ -14,7 +14,16 @@ $(document).ready(() => {
       document.title = title + ' - Coma Studio';
       $("#about-title").text(title);
       $("#news-photo").attr('src', `../lib/assets/${photo}`);
-      $("#news-text").text(text);
+
+      text = text.split('<br />');
+
+      for (let i = 0; i < text.length; i++) {
+        let part = text[i];
+        let element = `
+        <span class="news-text">${part}</span>
+        `;
+        $("#news-container").append(element);
+      }
 
       $(".top-bar").css('background', `-webkit-linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${photo})`);
       $(".top-bar").css('background', `linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url(../../lib/assets/${photo})`);
