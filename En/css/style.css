@@ -1620,3 +1620,7 @@ textarea:focus {
     border: 2px solid #ffbf00;
     background: none;
 }
+
+#news-extra-square {
+  position: relative !important;
+}

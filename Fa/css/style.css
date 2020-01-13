@@ -1784,3 +1784,7 @@ textarea:focus {
 .user-portfolio-header {
   margin-bottom: 20px;
 }
+
+#news-extra-square {
+  position: relative !important;
+}

@@ -1,7 +1,7 @@
 $(document).ready(() => {
   var news = `
   <!-- single work -->
-  <div class="col-md-3 col-sm-6">
+  <div class="col-md-3 col-sm-6" id="news-extra-square">
       <a href="/Fa/News" class="portfolio_item">
           <img src="../lib/assets/3.jpg" alt="image" class="img-responsive" />
           <div class="portfolio_item_hover">
