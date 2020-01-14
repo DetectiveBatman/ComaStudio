@@ -35,7 +35,26 @@ $(document).ready(() => {
         let subcat = subcats[i];
         let enSubcat = subcat.en;
         let faSubcat = subcat.subcat;
-        let description = subcat.description.split('<br />');
+        let beforeDes = subcat.enDescription;
+        let newDes = '';
+        let stars = 0;
+        for (let i = 0; i < beforeDes.length; i++) {
+          let letter = beforeDes[i];
+          if (letter == '*') {
+            stars += 1;
+            if (stars % 2 == 0) {
+              newDes += '</b>';
+            }
+            else {
+              newDes += '<b>';
+            }
+          }
+          else {
+            newDes += letter;
+          }
+        }
+
+        let description = newDes.split('<br />');
         let des = '';
         for (let i = 0; i < description.length; i++) {
           let part = description[i];
