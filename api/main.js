@@ -14,6 +14,7 @@ module.exports = function launchAPI(app, db) {
       db.query(getQuery(req), (err, resp, fld) => {
         if (err) console.error(err);
         var result = resp;
+        
         for (let i = 0; i < resp.length; i++){
           let portfolio_item = resp[i];
           let subcategory = portfolio_item.subcat;
