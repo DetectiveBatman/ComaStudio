@@ -36,7 +36,7 @@ $(document).ready(() => {
       newDes = newDes.split('<br />');
 
       for (let i = 0; i < newDes.length; i++) {
-        let part = text[i];
+        let part = newDes[i];
         let element = `
         <span class="news-text">${part}</span>
         `;
