@@ -15,10 +15,27 @@ $(document).ready(() => {
       $("#about-title").text(title);
       $("#news-photo").attr('src', `../lib/assets/${photo}`);
 
-      text = text.split('<br />');
+      let newDes = '';
+        let stars = 0;
+        for (let i = 0; i < text.length; i++) {
+          let letter = text[i];
+          if (letter == '*') {
+            stars += 1;
+            if (stars % 2 == 0) {
+              newDes += '</b>';
+            }
+            else {
+              newDes += '<b>';
+            }
+          }
+          else {
+            newDes += letter;
+          }
+        }
+      newDes = newDes.split('<br />');
 
-      for (let i = 0; i < text.length; i++) {
-        let part = text[i];
+      for (let i = 0; i < newDes.length; i++) {
+        let part = newDes[i];
         let element = `
         <span class="news-text">${part}</span>
         `;
