@@ -10,20 +10,20 @@ function showSub(sub) {
   $(".category-text").remove();
   $("#category-descriptions").append(descriptions[sub]);
   let photo = photos[sub];
-  let link = links[sub] == '' ? `/En/subcategory?name=${sub}` : links[sub];
+  let link = links[sub] == '' ? `/Fa/subcategory?name=${sub}` : links[sub];
   let photoName = photo.split(',');
-  $("#category-photo-1").attr('src', `../lib/assets/${photoName[1]}`);
+  $("#category-photo-1").attr('src', `../lib/assets/${photoName[0]}`);
   if (sub != "all") {
-    $("#category-photo-2").attr('src', `../lib/assets/${photoName[0]}`);
+    $("#category-photo-2").attr('src', `../lib/assets/${photoName[2]}`);
     $("#subcat-portfolio").attr('href', link);
     $("#special-img").css('display', 'block');
     $("#category-photo-sec").css('display', 'none');
   } else {
     $("#category-photo-sec").css('display', 'block');
-    $("#category-photo-sec").attr('src', `../lib/assets/${photoName[0]}`);
+    $("#category-photo-sec").attr('src', `../lib/assets/${photoName[2]}`);
     $("#special-img").css('display', 'none');
   }
-  $("#category-photo-3").attr('src', `../lib/assets/${photoName[2]}`);
+  $("#category-photo-3").attr('src', `../lib/assets/${photoName[1]}`);
 }
 
 $(document).ready(() => {
