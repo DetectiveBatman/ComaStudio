@@ -1133,6 +1133,19 @@ textarea:focus {
     .col-md-6 h3 {
         margin-top: 30px;
     }
+    .footer-menu ul {
+      padding: 0;
+      width: 90% !important;
+    }
+    .category-text {
+      font-size: 14px !important;
+    }
+    #subcat-portfolio span {
+      font-size: 16px;
+    }
+    #radio-description {
+      margin: 0 5% !important;
+    }
 }
 
 @media only screen and (max-width: 670px) {
