@@ -14,7 +14,7 @@ module.exports = function launchAPI(app, db) {
       db.query(getQuery(req), (err, resp, fld) => {
         if (err) console.error(err);
         var result = resp;
-        
+
         for (let i = 0; i < resp.length; i++){
           let portfolio_item = resp[i];
           let subcategory = portfolio_item.subcat;
@@ -124,7 +124,7 @@ module.exports = function launchAPI(app, db) {
     app.post('/api/getRadio', (req, res, next) => {
       function getQuery(req){
         let parameter = req.body;
-        return `SELECT * FROM radio`;
+        return `SELECT * FROM podcast`;
       }
 
       db.query(getQuery(req), (err, resp, fld) => {
