@@ -1629,3 +1629,43 @@ textarea:focus {
 #news-extra-square {
   position: relative !important;
 }
+
+/* podcast */
+#podcast-ul {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  direction: ltr;
+  flex-direction: column;
+}
+
+#podcast-ul li {
+  float: left;
+  width: 50%;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.podcast-name {
+  float: left;
+  width: 100%;
+}
+
+#podcast-ul li span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #393939;
+  padding-bottom: 1px;
+  border-bottom: 1px #f3f3f3 solid;
+  float: left;
+}
+
+#podcast-ul li p {
+  font-size: 16px;
+}
+
+.audio-div {
+  margin: 0 auto;
+}
