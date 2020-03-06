@@ -15,6 +15,21 @@ $(document).ready(() => {
       </a>
   </div>
   <!-- end single work -->
+  <!-- single work -->
+  <div class="col-md-3 col-sm-6">
+  <a href="/Fa/artists" class="portfolio_item">
+  <img src="../lib/assets/3.jpg" alt="image" class="img-responsive" />
+  <div class="portfolio_item_hover">
+  <div class="portfolio-border clearfix">
+  <div class="item_info">
+  <span><div>هنرمندان</div></span>
+  <em>هنرمندان کما استودیو</em>
+  </div>
+  </div>
+  </div>
+  </a>
+  </div>
+  <!-- end single work -->
   `;
   $('.portfolio_container').append(news);
 

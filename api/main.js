@@ -105,9 +105,9 @@ module.exports = function launchAPI(app, db) {
       function getQuery(req){
         let parameter = req.body;
         if (parameter.username) {
-          return `SELECT id, username, photo, biography, role, name FROM users WHERE username='${parameter.username}'`;
+          return `SELECT * FROM users WHERE username='${parameter.username}'`;
         }
-        return `SELECT id, username, photo, biography, role, name FROM users`;
+        return `SELECT * FROM users`;
       }
 
       db.query(getQuery(req), (err, resp, fld) => {

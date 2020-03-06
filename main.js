@@ -54,6 +54,14 @@ app.get('/Fa/user', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/user.html');
 });
 
+app.get('/Fa/artists', (req, res, next) => {
+  res.sendFile(__dirname + '/Fa/artists.html');
+});
+
+app.get('/En/artists', (req, res, next) => {
+  res.sendFile(__dirname + '/Fa/artists.html');
+});
+
 app.get('/En/newsPage', (req, res, next) => {
   res.sendFile(__dirname + '/En/news.html');
 });
