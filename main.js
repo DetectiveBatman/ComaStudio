@@ -50,7 +50,7 @@ app.get('/Fa/news', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/news-page.html');
 });
 
-app.get('/Fa/user', (req, res, next) => {
+app.get('/Fa/artist', (req, res, next) => {
   res.sendFile(__dirname + '/Fa/user.html');
 });
 
@@ -70,11 +70,17 @@ app.get('/En/news', (req, res, next) => {
   res.sendFile(__dirname + '/En/news-page.html');
 });
 
-app.get('/En/user', (req, res, next) => {
+app.get('/En/artist', (req, res, next) => {
   res.sendFile(__dirname + '/En/user.html');
 });
 
+app.get('/Fa/artistPortfolio', (req, res, next) => {
+  res.sendFile(__dirname + '/Fa/artistPortfolio.html');
+});
 
+app.get('/En/artistPortfolio', (req, res, next) => {
+  res.sendFile(__dirname + '/En/artistPortfolio.html');
+});
 api(app, db);
 
 app.listen(port);

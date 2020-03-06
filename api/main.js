@@ -35,6 +35,24 @@ module.exports = function launchAPI(app, db) {
       });
     });
 
+    app.post('/api/getArtistPortfolio', (req, res, next) => {
+      console.log('here');
+      function getQuery(req) {
+        if (req.body.artist) {
+          return `SELECT * FROM portfolio WHERE artist='${req.body.artist}'`;
+        }
+      }
+
+      db.query(getQuery(req), (err, resp, fld) => {
+        if (err) console.error(err);
+        var result = resp;
+        res.json({
+          ok: true,
+          res: result
+        });
+      });
+    });
+
     /* Subcats */
 
     app.post('/api/getSubcats', (req, res, next) => {

@@ -6,19 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>درباره‌ی ما - کما استودیو</title>
+    <title>نمونه کارها - کما استودیو</title>
     <link rel="icon" href="../lib/assets/Logo.png" type="image/x-icon">
-
-    <!-- Font Awesome 5.7.0 -->
-    <script src="https://kit.fontawesome.com/1077f1a041.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1077f1a041.js" crossorigin="anonymous"></script>
 
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/media.css" rel="stylesheet">
 
 
     <!-- modernizr -->
@@ -46,10 +43,10 @@
     <!-- end Preloader -->
 
     <div class="container-fluid">
-       <!-- box-header -->
+        <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
-              <a href="/Fa"><img src="../lib/assets/Logo.png" width="80" alt="Logo"></a>
+              <a href="index.html"><img src="../lib/assets/Logo.png" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
@@ -65,8 +62,8 @@
 
               <li><a href="index.html">صفحه‌ی اصلی</a></li>
               <li><a href="about.html">درباره‌ی ما</a></li>
-              <div class="yellow-line"><i></i></div>
               <li><a href="portfolio.html">نمونه کارها</a></li>
+              <div class="yellow-line"><i></i></div>
               <li><a href="contact.html">تماس با ما</a></li>
               <li><a href="radio.html">Radio Coma</a></li>
 
@@ -82,47 +79,27 @@
         <!-- end nav -->
     </div>
 
-    <!-- Top bar -->
+    <!-- top bar -->
     <div class="top-bar">
-        <h1>درباره‌ی ما</h1>
-        <p style="direction: rtl;"><a href="/">خانه</a> / هنرمندان</p>
+        <h1 id="top-bar-address"></h1>
+        <p id="top-bar-location"></p>
     </div>
-    <!-- end Top bar -->
+    <!-- end top bar -->
 
-    <!-- Main container -->
-    <div id="about-title-parent">
-      <span id="about-title">هنرمند</span>
-      <br>
-      <span id="about-subtitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
-
-    </div>
-
-    <div id="artists-container" class="container main-container clearfix">
-
-
-      <div id="category-descriptions">
-        <span class="category-text" style="text-align: right;"></span>
-
-        <div id="category-media">
-          <img src="" class="category-media" id="category-photo-1">
-          <img src="" class="category-media" id="category-photo-3">
-
-          <div id="special-img" class="category-media">
-            <div id="category-media-content">
-              <img src="" id="category-photo-2" alt="image" class="img-responsive">
+    <!-- main container -->
+    <div style="padding-top: 0;" class="main-container portfolio-inner clearfix">
+        <!-- portfolio div -->
+        <div class="portfolio-div">
+            <div class="portfolio">
+                <!-- portfolio_container -->
+                <div class="no-padding portfolio_container clearfix"></div>
+                <!-- end portfolio_container -->
             </div>
-            <div class="gradient">
-              <a id="subcat-portfolio">
-                <span>نمونه‌کارها</span>
-              </a>
-            </div>
-          </div>
-
+            <!-- portfolio -->
         </div>
-      </div>
-
+        <!-- end portfolio div -->
     </div>
-    <!-- end Main container -->
+    <!-- end main container -->
 
 
     <!-- footer -->
@@ -160,6 +137,7 @@
 
 
 
+
     <!-- jQuery -->
     <script src="js/jquery-2.1.1.js"></script>
     <!--  plugins -->
@@ -171,7 +149,7 @@
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
-    <script src="js/user.js"></script>
+    <script src="js/artistPortfolio.js"></script>
 </body>
 
 </html>
