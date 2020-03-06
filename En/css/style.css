@@ -1669,3 +1669,27 @@ textarea:focus {
 .audio-div {
   margin: 0 auto;
 }
+
+#video-media {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#youtube-aparat {
+  float: right;
+}
+
+.video-button {
+  border: 0;
+  background: #FFF;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.video-button a {
+  color: #000;
+}
+
+.video-button a i {
+  font-size: 20px;
+}

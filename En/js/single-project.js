@@ -20,11 +20,31 @@ $(document).ready(() => {
         $("#description-parent").append(element);
       }
 
+      if (img.substr(-4) == '.mp4') {
+        let aparat = item.aparat;
+        let youtube = item.youtube;
+        img = `../lib/video/${item.largeImg}`;
+        let videoTag =
+        `<video id="video-media" controls autoplay>
+            <source id="video-src" type="video/mp4" src="${img}">
+            your browser doesn't support this feature.
+        </video>`;
+        $('#media').append(videoTag);
+        let youtubeElement =
+        `            <div id="youtube-aparat">
+                      <button class="video-button"><a href="${aparat}"><i class="fab fa-youtube"></i></a></button>
+                      <button class="video-button"><a href="${youtube}"><i class="fab fa-youtube"></i></a></button>
+                    </div>`;
+
+        $("#video-description").append(youtubeElement);
+      } else {
+        $("#project-image").attr('src', img);
+      }
+
       document.title = title + ' - Coma Studio';
       $("#top-bar-title").text(title);
       $("#top-bar-prtitle").text(title);
       $("#project-title").text(title);
-      $("#project-image").attr('src', img);
       let catItem = `<li><i class="ion-ios-circle-filled"></i> ${category}</li>`
       $(".cat-ul").append(catItem);
       let subcatItem = `<li><i class="ion-ios-circle-filled"></i> ${subcat}</li>`
