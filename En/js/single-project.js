@@ -11,11 +11,11 @@ $(document).ready(() => {
       let category = item.category;
       let subcat = item.subcat;
       let title = item.enTitle;
-      let description = item.description.split("<br />");
+      let description = item.enDescription.split("<br />");
       for (let i = 0; i < description.length; i++) {
         let part = description[i];
         let element = `
-        <p class="project-description">${part}</p>
+        <p class="project-description" style="direction: ltr; float: left;">${part}</p>
         `;
         $("#description-parent").append(element);
       }

@@ -59,7 +59,7 @@ app.get('/Fa/artists', (req, res, next) => {
 });
 
 app.get('/En/artists', (req, res, next) => {
-  res.sendFile(__dirname + '/Fa/artists.html');
+  res.sendFile(__dirname + '/En/artists.html');
 });
 
 app.get('/En/newsPage', (req, res, next) => {

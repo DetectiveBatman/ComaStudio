@@ -15,6 +15,21 @@ $(document).ready(() => {
       </a>
   </div>
   <!-- end single work -->
+  <!-- single work -->
+  <div class="col-md-3 col-sm-6">
+  <a href="/En/artists" class="portfolio_item">
+  <img src="../lib/assets/3.jpg" alt="image" class="img-responsive" />
+  <div class="portfolio_item_hover">
+  <div class="portfolio-border clearfix">
+  <div class="item_info">
+  <span><div>Artists</div></span>
+  <em>Coma Studio's Artists</em>
+  </div>
+  </div>
+  </div>
+  </a>
+  </div>
+  <!-- end single work -->
   `;
   $('.portfolio_container').append(news);
 
